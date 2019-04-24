@@ -1,0 +1,46 @@
+<!-- 评论列表可滑动区域 -->
+ <view class='row'>
+  <text class='title'>{{ commentList?'评论列表':"还没有评论哦,欢迎前来抢沙发~~"}}</text>
+  <button style="background-color:{{isComment?'#3090e4':'#fff'}}" 
+          class="commentBtn" 
+          data-uid='1' 
+          bindtap='isComment' >
+          评论
+  </button>
+</view>
+<scroll-view class="commentList">
+ <block wx:for="{{commentList}}" wx:for-item="item" wx:for-index="i" wx:key="">
+             <view class="commentLine row"  
+                   data-uid='{{item.uid}}' 
+                   data-username='{{item.username}}' 
+                   data-cid='{{item.id}}' 
+                   data-id='{{item.id}}' 
+                   data-type='comment' 
+                   bindtap='isReply'>
+              <text class='username'>{{commentList[i].username}} </text>
+              评论: {{commentList[i].msg}}
+              <text class='time'>{{commentList[i].createdAt}}</text>
+              </view>
+                    <view class="replyArea" wx:for="{{commentList[i].replys}}" wx:for-index="j" wx:for-item="reply" wx:key="">
+                             <view class="replyLine row" 
+                                    data-uid='{{reply.uid}}'
+                                    data-username='{{reply.username}}'
+                                    data-cid='{{commentList[i].id}}'
+                                    data-id='{{reply.id}}' 
+                                    data-type='reply' 
+                                    bindtap='isReply'>
+                             <text class='username'>{{reply.username}}</text>
+                               回复
+                               <text class='username'>{{reply.toname}}</text>
+                               :
+                              {{reply.msg}}      
+                               <text class='time'>{{reply.createdAt}}</text>     
+                              </view>
+                    </view>
+                </block>
+</scroll-view>
+<view class='sendArea'>
+    <textarea class="msg title" placeholder='欢迎讨论 ~ ~'  value='{{msg}}' fixed='true' bindinput='textarea' >
+    </textarea>
+    <button class="send" bindtap='send'> {{isComment?'评论':'回复'}}</button>
+</view>

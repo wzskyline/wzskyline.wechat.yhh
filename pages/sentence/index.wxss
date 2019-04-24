@@ -1,0 +1,36 @@
+.swiper-view{
+  height:  500rpx;
+  background: rgba(74, 207, 196, 0.295);
+  margin-bottom: 20rpx;
+}
+.swiper-view .swiper-swiper{
+  width: 100%;
+  height: 100%;
+}
+ 
+.swiper-view .swiper-item{
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction:column ;
+}
+
+.col{
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction:column ;
+}
+.tip{
+ padding-left: 20px;
+}
+.line{
+   padding: 20px;
+   border: 1px solid #8c8c8c;
+   margin: 3px;
+}
+.str{
+  margin: 5px
+}

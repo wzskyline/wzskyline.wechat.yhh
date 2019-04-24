@@ -1,0 +1,10 @@
+.main{
+  padding: 10px;
+  margin: 10px;
+}
+.noun{
+  color:bisque;
+}
+.view{
+  color:chocolate;
+}

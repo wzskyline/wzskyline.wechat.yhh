@@ -1,0 +1,45 @@
+/* pages/test/comment/index.wxss */
+.row{
+  display: flex;
+}
+.title{
+  padding-left:20px; 
+  font-size: 24rpx;
+}
+.commentBtn,.commentLineBtn,.replyLineBtn{
+ width: 15%;
+ font-size: 12rpx;
+}
+.commentList{
+   margin-top: 20px;
+   padding: 3px 20px 3px 10px;
+}
+.replyArea{
+  margin-left: 20px;
+  padding: 3px 20px 3px 10px;
+}
+.commentLine,.replyLine{
+  align-items: center;
+  background-color: #FFF;
+  display: flex;
+   font-size: 24rpx;
+}
+.sendArea{
+  width: 100%;
+}
+textarea{
+  width: 90%;
+  border: 1px solid silver;
+  margin: 3px;
+  padding:  3px;
+}
+ 
+.username{
+  color: rgba(193, 30, 226, 0.568);
+  padding: 0px 3px 0 3px; 
+}
+.time{
+  font-size: 8px;
+  color: #8c8c8c;
+  padding: 0px 3px 0 20px; 
+}

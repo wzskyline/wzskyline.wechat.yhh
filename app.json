@@ -1,0 +1,42 @@
+{
+  "init": "页面显示第一个 json 文档严格",
+  "pages": [
+    
+    "pages/index/index",
+    "pages/file/files",
+    "pages/sentence/index",
+    "pages/file/file",
+    "pages/file/fileDetail/index",
+    "pages/box/box",
+    "pages/test/comment/index",
+    "pages/box/oneNoun/index",
+    "pages/test/table/index",
+    "pages/test/words/index"
+  ],
+ "tabBar": {
+  "borderStyle": "black",
+  "position": "bottom",
+  "backgroundColor": "#FFFFFF",
+  "color": "gray",
+  "selectedColor": "#DF5054",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home2.png"
+    },
+    {
+      "pagePath": "pages/file/files",
+      "iconPath": "images/file.png",
+      "selectedIconPath": "images/file2.png"
+    }
+  ]
+},
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "意合欢",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

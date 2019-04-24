@@ -1,0 +1,67 @@
+ <!-- 添加词汇 -->
+ <view class="flex-wrap header">
+      <input
+        placeholder="我也来添加一个新词" 
+        bindinput="newNoun" 
+        value="{{newNoun}}" 
+        class="new-todo"/>
+      <text style="display: {{selectOne ? 'inline': 'none'}}" class="add tappable" ontap="addNoun">添加</text>
+</view> 
+<view class='header'>
+      <text style="display: {{newNoun ? 'inline': 'none'}}"  >选择一个类别:</text>
+</view> 
+<view class="header">
+      <text style="display: {{newNoun ? 'inline': 'none'}}" wx:for='{{navData}}'  wx:key="key" 
+          class="{{item.id == selectOne ? 'typeItem':''}}"  data-text='{{item.text}}' data-id='{{item.id}}' bindtap='select'>
+            <text  class='typeItemText'>{{item.text}}</text>
+      </text> 
+</view>  
+  <!-- 显示词汇 -->
+<view class="tabNav">
+    <view wx:for="{{navTab}}" wx:key="index" 
+          data-id="{{index}}"
+          bindtap="currentTab" 
+         class="{{currentTab==index ? 'cur' : ''}}">
+        <text>
+            {{item}}
+        </text>
+    </view>  
+</view>
+<view class="Info">
+<!-- 显示系统通过的词汇 -->
+  <view  class='content'  style="display: {{currentTab==0? 'inline': 'none'}}">  
+  <block wx:for="{{allNouns}}" wx:key="key" wx:for-index="key" wx:for-item="item">
+    <view class='lab' data-key="{{key}}"
+           data-noun="{{item.noun}}"
+            data-id="{{item.id}}"
+            data-view="{{item.view}}"  
+           ontap="showNoun" style="background-color:{{randomColorArr[key]}}">
+      {{item.noun}}
+    </view>
+     
+  </block> 
+  </view>
+  <!-- /显示系统通过的词汇 -->
+  <!-- 显示我的词汇 -->
+  <view class="table" style="display: {{currentTab==1? 'inline': 'none'}}">
+          <view class="tr bg-w">
+            <view class="th">词条</view>
+            <view class="th">浏览数</view>
+            <view class="th ">状态</view>
+          </view>
+          <block wx:for="{{myNouns}}" wx:key="key-1">
+            <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+              <view class="td">{{item.noun}}</view>
+              <view class="td">{{item.view}}</view>
+              <view class="td">{{item.state==0?'未审核':'审核'}}</view>
+            </view>
+            <view class="tr" wx:else>
+              <view class="td">{{item.noun}}</view>
+              <view class="td">{{item.view}}</view>
+              <view class="td">{{item.state==0?'未审核':'审核'}}</view>
+            </view>
+          </block>
+ <!-- /显示我的词汇 -->
+  </view> 
+</view>
+ 

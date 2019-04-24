@@ -1,0 +1,19 @@
+<view class='swiper-view'>
+    <swiper class='swiper-swiper' display-multiple-items="{{0}}"   previous-margin="10rpx;" next-margin="10rpx;">
+      <swiper-item wx:for="{{list}}" wx:key="key">
+        <view class="swiper-item">
+           <text >{{item.username}}</text>
+           <text class='str' style="color:{{wordColor[index]}}">{{item.s1}}</text>
+           <text class='str' style="color:{{wordColor[index+1]}}">{{item.s2}}</text>
+           <text class='str' style="color:{{wordColor[index+2]}}">{{item.s3}}</text>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view> 
+ <view class='row'>
+    <text class='tip'>来写点有趣的句子</text>
+    <input class='line' value="{{s1}}" placeholder='开个头 ~ ~' bindinput='textarea1'> </input>
+    <input class='line' value="{{s2}}" placeholder='中间的话' bindinput='textarea2'> </input>
+    <input class='line' value="{{s3}}" placeholder='结尾'bindinput='textarea3'> </input>
+    <button class='line'  bindtap='save'>提交</button>
+ </view>

@@ -1,0 +1,12 @@
+<view class="header">
+  <text   class="titleLine"  >用图片分享美好生活</text>
+  
+  <button  class="upImgBtn"  bindtap='chooseImageTap'>选择图片</button>
+</view>
+ <view class="header">
+ 
+   <textarea   placeholder='图片相应描述 ~ ~'  value='{{desc}}' fixed='true' bindinput='textarea'   >
+    </textarea>
+  <button style="display: {{desc ? 'inline': 'none'}}" class="upBtn"  bindtap='upFile'>上传图片</button>
+</view>
+ 

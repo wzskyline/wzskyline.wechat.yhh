@@ -1,0 +1,66 @@
+/* pages/test/comment/index.wxss */
+.row{
+  display: flex;
+  padding:20px; 
+}
+.title{
+  padding-left:20px; 
+  font-size: 24rpx;
+}
+.commentBtn,.commentLineBtn,.replyLineBtn{
+ width: 15%;
+ font-size: 12rpx;
+}
+.commentList{
+   margin-top: 20px;
+   padding: 3px 20px 3px 10px;
+}
+.replyArea{
+  margin-left: 20px;
+  padding: 3px 20px 3px 10px;
+}
+.commentLine,.replyLine{
+  align-items: center;
+  background-color: #FFF;
+  display: flex;
+   font-size: 24rpx;
+}
+ 
+.msg{
+  
+  border: 1px solid silver;
+  margin: 3px 30px 3px 30px;
+  padding:  3px;
+  border-radius:3px; 
+  width: 80%;
+}
+.send{
+  width: 80%;
+}
+.username{
+  color: rgba(193, 30, 226, 0.568);
+  padding: 0px 3px 0 3px; 
+}
+.time{
+  font-size: 8px;
+  color: #8c8c8c;
+  padding: 10px 3px 0 20px; 
+}
+
+image{
+  background-color: #8c8c8c;
+  border-radius: 3px;
+  padding: 3px;
+  width: 50%;
+  
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+}
+.line{
+   padding: 20px;
+   border: 1px solid #8c8c8c;
+   margin: 3px;
+}

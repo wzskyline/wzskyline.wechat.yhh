@@ -1,0 +1,10 @@
+ 
+<view class="mian">
+    <text>词条名:<text class="noun"> {{noun.noun}}</text></text>
+</view> 
+<view>
+    <text>已有:<text class="view"> {{noun.view}}人</text>浏览本词条</text>
+</view> 
+<web-view src="{{url}}"></web-view>
+
+
